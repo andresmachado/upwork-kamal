@@ -1,0 +1,9 @@
+<h1>User</h1>
+<ul>
+{% for user in object_list %}
+    <li>{{ user.name }} - {{ user.email }} - {{ user.created }}</li>
+{% empty %}
+    <li>No users yet.</li>
+{% endfor %}
+</ul>
+<a href="{% url 'user-add' %}">Add new user</a>
